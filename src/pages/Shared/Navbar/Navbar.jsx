@@ -1,6 +1,15 @@
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/toyLogo.png'
+import { useContext } from 'react';
+import { AuthContext } from '../../../providers/AuthProvider';
+
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
+    console.log(user)
+
+    const handleLogOut = () => {
+        logOut()
+    }
     return (
         <div className=''>
             <div className="navbar px-10 bg-base-300">
@@ -17,7 +26,7 @@ const Navbar = () => {
                             <li className='font-bold '><Link>Blogs</Link></li>
                         </ul>
                     </div>
-                    <img width={40} src={logo} alt="" />
+                    <img width={50} src={logo} alt="" />
                     <Link className='ml-2 font-extrabold text-2xl' to='/'>Magic ToyBox </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -30,9 +39,15 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <img width={40} src={logo} alt="" />
-                    <Link to='/login'>Login</Link>
-                    <a className="btn ml-2">Get started</a>
+
+                    {
+                        user ? <>
+                            <img className='border border-red-700 rounded-full' title={user?.displayName} height={50} width={50} src={user.photoURL} alt="" />
+                            <button className='ml-3 font-bold' onClick={handleLogOut}>LogOut</button>
+                        </> :
+                            <p className='font-bold'><Link to='/login'>Login</Link></p>
+                    }
+
                 </div>
             </div>
         </div>
