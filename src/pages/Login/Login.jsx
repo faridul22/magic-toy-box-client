@@ -1,11 +1,15 @@
 import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Login = () => {
     const { errorMessage, setErrorMessage, signIn, loginWithGoogle } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const handleSingIn = event => {
         event.preventDefault();
@@ -20,6 +24,7 @@ const Login = () => {
                 const logged = result.user;
                 console.log(logged)
                 setErrorMessage("")
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 setErrorMessage('Email and password does not match')
@@ -34,10 +39,11 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
                 setErrorMessage("")
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error)
-                setErrorMessage("Google login action failed")
+                setErrorMessage("Google login action failed try again")
             })
     }
     return (

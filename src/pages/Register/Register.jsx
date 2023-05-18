@@ -1,10 +1,14 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaBeer, FaGoogle } from 'react-icons/fa';
 
 const Register = () => {
     const { createUser, errorMessage, setErrorMessage, updateUserProfile, loginWithGoogle } = useContext(AuthContext)
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const handleRegister = event => {
         event.preventDefault();
@@ -26,6 +30,7 @@ const Register = () => {
                     .catch(error => { })
                 console.log(createdUser)
                 setErrorMessage("")
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 setErrorMessage('Your password must be 6 characters')
@@ -40,10 +45,11 @@ const Register = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
                 setErrorMessage("")
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error)
-                setErrorMessage("Google login action failed")
+                setErrorMessage("Google login action failed try again")
             })
     }
     return (
