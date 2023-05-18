@@ -25,9 +25,10 @@ const Register = () => {
                     .then(result => { })
                     .catch(error => { })
                 console.log(createdUser)
+                setErrorMessage("")
             })
             .catch(error => {
-                setErrorMessage('Your password must be 6 catchers')
+                setErrorMessage('Your password must be 6 characters')
                 console.log(error)
             })
     }
@@ -38,9 +39,11 @@ const Register = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
+                setErrorMessage("")
             })
             .catch(error => {
                 console.log(error)
+                setErrorMessage("Google login action failed")
             })
     }
     return (
@@ -57,30 +60,30 @@ const Register = () => {
                                     <label className="label">
                                         <span className="label-text">Name</span>
                                     </label>
-                                    <input type="text" name="name" placeholder="Name" className="input input-bordered" />
+                                    <input required type="text" name="name" placeholder="Name" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Photo Url</span>
                                     </label>
-                                    <input type="text" name="photo" placeholder="Photo url" className="input input-bordered" />
+                                    <input required type="text" name="photo" placeholder="Photo url" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="email" name="email" placeholder="email" className="input input-bordered" />
+                                    <input required type="email" name="email" placeholder="email" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" name="password" placeholder="password" className="input input-bordered" />
+                                    <input required type="password" name="password" placeholder="password" className="input input-bordered" />
                                 </div>
-                                <div className="text-center mt-2 text-red-500 form-control">
+                                <div className="text-center mt-1 text-red-500 form-control">
                                     <span>{errorMessage}</span>
                                 </div>
-                                <div className="form-control mt-2">
+                                <div className="form-control mt-4">
                                     <button className="btn normal-case btn-primary">Register</button>
                                 </div>
 
