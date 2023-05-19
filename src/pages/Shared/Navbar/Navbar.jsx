@@ -13,7 +13,7 @@ const Navbar = () => {
     }
     return (
         <div className=''>
-            <div className="navbar px-10 bg-base-300">
+            <div className="navbar lg:px-10 bg-base-300">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -38,7 +38,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <img width={50} src={logo} alt="" />
-                    <Link className='ml-2 font-extrabold text-2xl' to='/'>Magic ToyBox </Link>
+                    <Link className='ml-2 font-extrabold sm:text-xs md:text-2xl' to='/'>Magic ToyBox </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -63,7 +63,13 @@ const Navbar = () => {
 
                     {
                         user ? <>
-                            <img className='border border-red-700 rounded-full' title={user?.displayName} height={50} width={50} src={user?.photoURL} alt="" />
+                            <div className="avatar">
+                                <div className="w-10 rounded-full ring ring-zinc-600 ring-offset-base-100 ring-offset-2">
+                                    <img className='' title={user?.displayName} src={user?.photoURL} alt="" />
+                                </div>
+                            </div>
+
+
                             <button className='ml-3 font-bold' onClick={handleLogOut}>LogOut</button>
                         </> :
                             <p className='font-bold'><Link to='/login'>Login</Link></p>
