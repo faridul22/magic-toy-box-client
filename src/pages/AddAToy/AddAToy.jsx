@@ -15,8 +15,8 @@ const AddAToy = () => {
         const category = form.category.value;
         const price = form.price.value;
         const raging = form.raging.value;
-        const sellerName = form.sellerName.value;
-        const sellerEmail = form.sellerEmail.value;
+        const name = form.name.value;
+        const email = form.email.value;
         const description = form.description.value;
         const newToy = {
             toyName,
@@ -25,8 +25,8 @@ const AddAToy = () => {
             category,
             price,
             raging,
-            sellerName,
-            sellerEmail,
+            name,
+            email,
             description,
         }
         console.log(newToy)
@@ -125,7 +125,7 @@ const AddAToy = () => {
                                 <span className="label-text font-bold">Seller name</span>
                             </label>
                             <label className="">
-                                <input value={user && user.displayName} type="text" name='sellerName' placeholder="seller name" className="input input-bordered w-full" />
+                                <input value={user && user.displayName} type="text" name='name' placeholder="seller name" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control my-3 mx-3">
@@ -133,7 +133,7 @@ const AddAToy = () => {
                                 <span className="label-text font-bold">Seller email</span>
                             </label>
                             <label className="">
-                                <input value={user && user.email} type="text" name='sellerEmail' placeholder="seller email" className="input input-bordered w-full" />
+                                <input value={user && user.email} type="text" name='email' placeholder="seller email" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
