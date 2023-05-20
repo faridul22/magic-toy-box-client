@@ -2,7 +2,7 @@ import React from 'react';
 
 const Gallery = () => {
     return (
-        <div className='container mx-auto my-6'>
+        <div className='container mx-auto mt-32 my-6'>
             <div className='mt-14 mb-10'>
                 <div className="divider text-3xl font-semibold">Toys Gallery</div>
                 <p className='text-center my-0 text-orange-500'>Our Toy Collection</p>

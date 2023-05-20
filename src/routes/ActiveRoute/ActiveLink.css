@@ -4,9 +4,9 @@
 }
 
 .link-container a:hover {
-    color: rgb(215, 45, 45);
+    color: rgb(233, 36, 233)
 }
 
 .active {
-    color: rgb(215, 45, 45);
+    color: rgb(213, 11, 213)
 }
