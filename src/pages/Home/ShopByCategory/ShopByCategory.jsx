@@ -22,26 +22,23 @@ const ShopByCategory = () => {
     console.log(active)
     console.log(toys)
     return (
-        <div>
+        <div className='container mx-auto'>
             <div className='mt-14 mb-10'>
                 <div className="divider text-3xl font-semibold">Shop By Category</div>
             </div>
             <div className='text-center'>
-
-                <div className='container mx-auto tabs tabs-boxed'>
-                    <div className="w-2/4 mx-auto">
-                        <button className='btn normal-case btn-outline btn-primary ml-6'>
-                            <a onClick={() => handleActive("sportsCar")} className={active === "sportsCar" ? "tab btn-primary" : ""}>Sports Car</a>
-                        </button>
-                        <button className='btn normal-case btn-outline btn-primary ml-6'>
-                            <a onClick={() => handleActive("truck")} className={active === "truck" ? "tab btn-primary" : ""}>Truck</a>
-                        </button>
-                        <button className='btn normal-case btn-outline btn-primary ml-6'>
-                            <a onClick={() => handleActive("bus")} className={active === "bus" ? "tab btn-primary" : ""}>Bus Car</a>
-                        </button>
+                <div className="flex justify-center items-center bg-slate-50 w-[550px] mx-auto font-medium normal-case text-xl">
+                    <div className=''>
+                        <div onClick={() => handleActive("sportsCar")} className={active === "sportsCar" ? "bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5"}>Sports Car</div>
+                    </div>
+                    <div className=''>
+                        <div onClick={() => handleActive("truck")} className={active === "truck" ? "bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5"}>Truck</div>
+                    </div>
+                    <div className=''>
+                        <div onClick={() => handleActive("bus")} className={active === "bus" ? "bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5"}>Bus Car</div>
                     </div>
                 </div>
-                <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10'>
                     {toys.map(toy => <CategoryCard
                         key={toy._id}
                         toy={toy}

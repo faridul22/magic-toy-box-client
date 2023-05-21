@@ -40,10 +40,13 @@ const Gallery = () => {
                             <img src="https://i.ibb.co/GVtdmFH/privatecar6.jpg" />
                         </div>
                         <div className="carousel-item h-full">
-                            <img src="https://i.ibb.co/B2cXBFt/privatecar3.jpg" />
+                            <img src="https://i.ibb.co/NKwsBY3/truck1.jpg" />
                         </div>
                         <div className="carousel-item h-full">
                             <img src="https://i.ibb.co/kxxRRpJ/car3.jpg" />
+                        </div>
+                        <div className="carousel-item h-full">
+                            <img src="https://i.ibb.co/B2cXBFt/privatecar3.jpg" />
                         </div>
                         <div className="carousel-item h-full">
                             <img src="https://i.ibb.co/G5BDvgY/truck3.jpg" />
@@ -51,9 +54,7 @@ const Gallery = () => {
                         <div className="carousel-item h-full">
                             <img src="https://i.ibb.co/Cv8nxdB/truck6.jpg" />
                         </div>
-                        <div className="carousel-item h-full">
-                            <img src="https://i.ibb.co/NKwsBY3/truck1.jpg" />
-                        </div>
+
                     </div>
                 </div>
                 {/* row 3 */}
@@ -64,19 +65,19 @@ const Gallery = () => {
                             <img src="https://i.ibb.co/H7L8sQJ/privatecar1.jpg" />
                         </div>
                         <div className="carousel-item h-full">
-                            <img src="https://i.ibb.co/kxxRRpJ/car3.jpg" />
+                            <img src="https://i.ibb.co/QMDBNhw/truck5.jpg" />
                         </div>
                         <div className="carousel-item h-full">
                             <img src="https://i.ibb.co/jz7fBw7/privatecar2.jpg" />
+                        </div>
+                        <div className="carousel-item h-full">
+                            <img src="https://i.ibb.co/kxxRRpJ/car3.jpg" />
                         </div>
                         <div className="carousel-item h-full">
                             <img src="https://i.ibb.co/y5cqNXr/privatecar7.jpg" />
                         </div>
                         <div className="carousel-item h-full">
                             <img src="https://i.ibb.co/zfsxZD7/truck2.jpg" />
-                        </div>
-                        <div className="carousel-item h-full">
-                            <img src="https://i.ibb.co/QMDBNhw/truck5.jpg" />
                         </div>
                     </div>
                 </div>
