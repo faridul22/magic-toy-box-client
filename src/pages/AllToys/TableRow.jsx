@@ -6,17 +6,17 @@ const TableRow = ({ toy }) => {
         quantity,
         category,
         price,
-        sellerName,
+        name,
     } = toy;
     return (
         <tr>
-            <td>{sellerName}</td>
+            <td>{name}</td>
             <td>{toyName}</td>
             <td>{category}</td>
             <td>Price: ${price}</td>
             <td>Quantity: {quantity}</td>
             <th>
-                <button className="btn btn-ghost btn-xs"><Link to={`/details/${_id}`}>View Details</Link></button>
+                <button className=" bg-[#be8748] text-white px-4 py-2 rounded-lg font-semibold"><Link to={`/details/${_id}`}>View Details</Link></button>
             </th>
         </tr>
     );

@@ -4,6 +4,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 const CategoryCard = ({ toy }) => {
     const { user } = useContext(AuthContext)
@@ -20,9 +21,12 @@ const CategoryCard = ({ toy }) => {
         const isLoggedIn = false; // Replace with your login check logic
 
         if (!user) {
-
-            navigate(from, { replace: true, }, notify());
-
+            Swal.fire(
+                'You have to',
+                'log in first to view details',
+                'error'
+            )
+            // navigate(from, { replace: true, });
 
         } else {
             // Proceed with displaying the toy details
@@ -55,8 +59,10 @@ const CategoryCard = ({ toy }) => {
                         {
                             user ? <button className='mr-3 bg-[#FF900E] text-white px-4 py-2 rounded-lg font-medium'><Link to={`/details/${_id}`}>View Details</Link></button>
                                 : <>
-                                    <ToastContainer />
-                                    <button onClick={handleViewDetails} className='mr-3 bg-[#FF900E] text-white px-4 py-2 rounded-lg font-medium'>View Details</button>
+
+                                    <Link to={`/details/${_id}`}>
+                                        <button onClick={handleViewDetails} className='mr-3 bg-[#FF900E] text-white px-4 py-2 rounded-lg font-medium'>View Details</button>
+                                    </Link>
                                 </>
                         }
                     </div>

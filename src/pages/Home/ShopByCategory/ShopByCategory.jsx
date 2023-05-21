@@ -27,15 +27,15 @@ const ShopByCategory = () => {
                 <div className="divider text-3xl font-semibold">Shop By Category</div>
             </div>
             <div className='text-center'>
-                <div className="lg:flex justify-center items-center bg-slate-50 lg:w-[550px] md:w-full md:mx-4 lg:mx-auto font-medium normal-case text-xl">
-                    <div className=''>
-                        <div onClick={() => handleActive("sportsCar")} className={active === "sportsCar" ? "bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5"}>Sports Car</div>
+                <div className="lg:flex container rounded-lg items-center justify-center bg-slate-50 mx-auto font-medium normal-case text-xl">
+                    <div className='mx-5'>
+                        <button onClick={() => handleActive("sportsCar")} className={active === "sportsCar" ? "rounded-xl bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5 rounded-xl bg-orange-100"}>Sports Car</button>
                     </div>
-                    <div className=''>
-                        <div onClick={() => handleActive("truck")} className={active === "truck" ? "bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5"}>Truck</div>
+                    <div className='mx-5'>
+                        <button onClick={() => handleActive("truck")} className={active === "truck" ? "rounded-xl bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5 rounded-xl bg-orange-100"}>Truck</button>
                     </div>
-                    <div className=''>
-                        <div onClick={() => handleActive("bus")} className={active === "bus" ? "bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5"}>Bus Car</div>
+                    <div className='mx-5'>
+                        <button onClick={() => handleActive("bus")} className={active === "bus" ? "rounded-xl bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5 rounded-xl bg-orange-100"}>Bus Car</button>
                     </div>
                 </div>
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10'>

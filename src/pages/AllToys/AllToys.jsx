@@ -9,8 +9,8 @@ const AllToys = () => {
     return (
         <div>
             <h1>All toys: {toys.length}</h1>
-            <div className="overflow-x-auto w-full">
-                <table className="table w-full">
+            <div className="overflow-x-auto container mx-auto">
+                <table className="table table-zebra w-full">
                     {/* head */}
                     <thead>
                         <tr>
