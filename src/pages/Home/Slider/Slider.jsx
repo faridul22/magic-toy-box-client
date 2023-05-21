@@ -2,7 +2,7 @@ import React from 'react';
 
 const Slider = () => {
     return (
-        <div className="">
+        <div className="mb-32">
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     <div className='relative'>
