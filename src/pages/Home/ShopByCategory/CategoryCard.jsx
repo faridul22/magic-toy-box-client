@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-import ViewDetails from './../../ViewDetails/ViewDetails';
-import { Link } from 'react-router-dom';
+import { Link, unstable_HistoryRouter, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,9 +10,30 @@ const CategoryCard = ({ toy }) => {
     const { picture, name, price, raging, _id } = toy || {};
     const notify = () => toast("Wow so easy!");
 
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/login";
+
+
+    const handleViewDetails = () => {
+        // Check if user is logged in (replace with your own login check logic)
+        const isLoggedIn = false; // Replace with your login check logic
+
+        if (!user) {
+
+            navigate(from, { replace: true, }, notify());
+
+
+        } else {
+            // Proceed with displaying the toy details
+            // Add your logic here to show the toy details page
+
+        }
+    };
+
     return (
         <div className='border-2 rounded-xl'>
-            <div className="card h-[560px] w-96 bg-base-100 shadow-md">
+            <div className="card h-[560px] w-full bg-base-100 shadow-md">
                 <figure className="px-10 pt-10">
                     <img src={picture} alt="Toy" className="rounded-xl w-3/4" />
                 </figure>
@@ -36,7 +56,7 @@ const CategoryCard = ({ toy }) => {
                             user ? <button className='mr-3 bg-[#FF900E] text-white px-4 py-2 rounded-lg font-medium'><Link to={`/details/${_id}`}>View Details</Link></button>
                                 : <>
                                     <ToastContainer />
-                                    <button className='mr-3 bg-[#FF900E] text-white px-4 py-2 rounded-lg font-medium'><Link onClick={notify} to="/login"  >View Details</Link></button>
+                                    <button onClick={handleViewDetails} className='mr-3 bg-[#FF900E] text-white px-4 py-2 rounded-lg font-medium'>View Details</button>
                                 </>
                         }
                     </div>

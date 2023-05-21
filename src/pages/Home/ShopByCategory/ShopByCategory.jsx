@@ -8,7 +8,7 @@ const ShopByCategory = () => {
     const [active, setActive] = useState("sportsCar");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allToy/${active}`)
+        fetch(`http://localhost:5000/categoryToy/${active}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -27,7 +27,7 @@ const ShopByCategory = () => {
                 <div className="divider text-3xl font-semibold">Shop By Category</div>
             </div>
             <div className='text-center'>
-                <div className="flex justify-center items-center bg-slate-50 w-[550px] mx-auto font-medium normal-case text-xl">
+                <div className="lg:flex justify-center items-center bg-slate-50 lg:w-[550px] md:w-full md:mx-4 lg:mx-auto font-medium normal-case text-xl">
                     <div className=''>
                         <div onClick={() => handleActive("sportsCar")} className={active === "sportsCar" ? "bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5"}>Sports Car</div>
                     </div>
