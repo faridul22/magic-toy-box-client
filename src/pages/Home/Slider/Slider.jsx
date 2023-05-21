@@ -1,15 +1,11 @@
 import React from 'react';
-import banner1 from '../../../assets/images/banner1.jpg'
-import banner2 from '../../../assets/images/banner2.jpg'
-import banner3 from '../../../assets/images/banner3.jpg'
-import banner4 from '../../../assets/images/banner4.jpg'
 
 const Slider = () => {
     return (
         <div className='h-fit'>
             <div className="carousel h-4/6 w-full">
                 <div id="slide1" className="carousel-item relative h-4/6 w-full">
-                    <img height={100} src={banner1} className="w-full" />
+                    <img height={100} src="https://i.ibb.co/XzFxGb5/banner1.jpg" className="w-full" />
                     <div className="absolute mx-auto h-full w-full bg-gradient-to-r from-[#585555] to-[rgba(21, 21, 21, 0)]">
                         <div className=' text-center w-1/2 mx-auto lg:mt-80 md:mt-32 sm:mt-20 text-white'>
                             <h2 className='lg:text-7xl lg:my-5 sm:text-3xl font-bold'>Sale 15%</h2>
@@ -24,7 +20,7 @@ const Slider = () => {
                     </div>
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
-                    <img height={100} src={banner2} className="w-full" />
+                    <img height={100} src="https://i.ibb.co/k6VRjTw/banner3.jpg" className="w-full" />
                     <div className="absolute mx-auto h-full w-full bg-gradient-to-r from-[#585555] to-[rgba(21, 21, 21, 0)]">
                         <div className=' text-center w-1/2 mx-auto lg:mt-80 md:mt-32 sm:mt-20 text-white'>
                             <h2 className='lg:text-7xl lg:my-5 sm:text-3xl font-bold'>Sale 15%</h2>
@@ -39,7 +35,7 @@ const Slider = () => {
                     </div>
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
-                    <img height={100} src={banner3} className="w-full" />
+                    <img height={100} src="https://i.ibb.co/4j3KmF9/banner4.jpg" className="w-full" />
                     <div className="absolute mx-auto h-full w-full bg-gradient-to-r from-[#585555] to-[rgba(21, 21, 21, 0)]">
                         <div className=' text-center w-1/2 mx-auto lg:mt-80 md:mt-32 sm:mt-20 text-white'>
                             <h2 className='lg:text-7xl lg:my-5 sm:text-3xl font-bold'>Sale 15%</h2>
@@ -54,7 +50,7 @@ const Slider = () => {
                     </div>
                 </div>
                 <div id="slide4" className="carousel-item relative w-full">
-                    <img height={100} src={banner4} className="w-full" />
+                    <img height={100} src="https://i.ibb.co/Gn3z7TK/privatecar5.jpg" className="w-full" />
                     <div className="absolute mx-auto h-full w-full bg-gradient-to-r from-[#585555] to-[rgba(21, 21, 21, 0)]">
                         <div className=' text-center w-1/2 mx-auto lg:mt-80 md:mt-32 sm:mt-20 text-white'>
                             <h2 className='lg:text-7xl lg:my-5 sm:text-3xl font-bold'>Sale 15%</h2>
