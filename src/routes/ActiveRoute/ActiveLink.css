@@ -3,10 +3,11 @@
     text-decoration: none;
 }
 
-.link-container a:hover {
-    color: rgb(233, 36, 233)
-}
+
 
 .active {
-    color: rgb(213, 11, 213)
+    background-color: #FF900E;
+    color: whitesmoke;
+    padding: 8px 16px;
+    border-radius: 7px;
 }

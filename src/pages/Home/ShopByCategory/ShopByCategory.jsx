@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import CategoryCard from './CategoryCard';
 
 const ShopByCategory = () => {
+    const [toys, setToys] = useState([])
+    const [active, setActive] = useState("sportsCar");
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/allToy/${active}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setToys(data)
+            })
+    }, [active])
+
+    const handleActive = (tabName) => {
+        setActive(tabName)
+    }
+    console.log(active)
+    console.log(toys)
     return (
         <div>
             <div className='mt-14 mb-10'>
@@ -10,31 +28,25 @@ const ShopByCategory = () => {
             </div>
             <div className='text-center'>
 
-
-                {/* <div className="tabs tabs-boxed">
-                    <a className="tab">Tab 1</a>
-                    <a className="tab tab-active">Tab 2</a>
-                    <a className="tab">Tab 3</a>
-                </div> */}
-
-
-                <Tabs>
-                    <TabList>
-                        <Tab>Micro Bus</Tab>
-                        <Tab>Title 2</Tab>
-                        <Tab>Title 3</Tab>
-                    </TabList>
-
-                    <TabPanel>
-                        <h2>Any content 1</h2>
-                    </TabPanel>
-                    <TabPanel>
-                        <h2>Any content 2</h2>
-                    </TabPanel>
-                    <TabPanel>
-                        <h2>Any content 3</h2>
-                    </TabPanel>
-                </Tabs>
+                <div className='container mx-auto tabs tabs-boxed'>
+                    <div className="w-2/4 mx-auto">
+                        <button className='btn normal-case btn-outline btn-primary ml-6'>
+                            <a onClick={() => handleActive("sportsCar")} className={active === "sportsCar" ? "tab btn-primary" : ""}>Sports Car</a>
+                        </button>
+                        <button className='btn normal-case btn-outline btn-primary ml-6'>
+                            <a onClick={() => handleActive("truck")} className={active === "truck" ? "tab btn-primary" : ""}>Truck</a>
+                        </button>
+                        <button className='btn normal-case btn-outline btn-primary ml-6'>
+                            <a onClick={() => handleActive("bus")} className={active === "bus" ? "tab btn-primary" : ""}>Bus Car</a>
+                        </button>
+                    </div>
+                </div>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+                    {toys.map(toy => <CategoryCard
+                        key={toy._id}
+                        toy={toy}
+                    ></CategoryCard>)}
+                </div>
             </div>
         </div>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const TableRow = ({ toy }) => {
-    const { toyName,
+    const { _id, toyName,
         quantity,
         category,
         price,
@@ -16,7 +16,7 @@ const TableRow = ({ toy }) => {
             <td>Price: ${price}</td>
             <td>Quantity: {quantity}</td>
             <th>
-                <button className="btn btn-ghost btn-xs"><Link to="/details">View Details</Link></button>
+                <button className="btn btn-ghost btn-xs"><Link to={`/details/${_id}`}>View Details</Link></button>
             </th>
         </tr>
     );
