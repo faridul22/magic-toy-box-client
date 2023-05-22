@@ -47,7 +47,7 @@ const AddAToy = () => {
                         title: 'Success!',
                         text: 'New Toy Added Successfully',
                         icon: 'success',
-                        confirmButtonText: 'Cool'
+                        confirmButtonText: 'Ok'
                     })
                 }
             })
@@ -56,8 +56,8 @@ const AddAToy = () => {
 
     return (
         <div className='container mx-auto w-3/4 my-16'>
-            <div className='border-4 p-10 rounded-lg bg-slate-200'>
-                <h1 className='text-center text-3xl font-bold'>Add A Toy</h1>
+            <div className='border-4 border-orange-200 p-10 rounded-lg  bg-orange-50'>
+                <h1 className='text-center text-3xl text-orange-500 mb-5 font-bold'>Add a new toy</h1>
                 <form onSubmit={handleAddAToy}>
                     <div className='grid lg:grid-cols-2'>
                         {/* name quantity row */}
@@ -74,7 +74,7 @@ const AddAToy = () => {
                                 <span className="label-text font-bold">Available Quantity</span>
                             </label>
                             <label className="">
-                                <input required type="text" name='quantity' placeholder="quantity" className="input input-bordered w-full" />
+                                <input required type="number" name='quantity' placeholder="quantity" className="input input-bordered w-full" />
                             </label>
                         </div>
                         {/* photo url and category row */}
@@ -83,7 +83,7 @@ const AddAToy = () => {
                                 <span className="label-text font-bold">Picture URL</span>
                             </label>
                             <label className="">
-                                <input required type="text" name='picture' placeholder="toy picture url" className="input input-bordered w-full" />
+                                <input required type="url" name='picture' placeholder="toy picture url" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control my-3 mx-3">
@@ -96,10 +96,9 @@ const AddAToy = () => {
                                     <option value="sportsCar">Sports Car</option>
                                     <option value="truck">Truck</option>
                                     <option value="bus">Bus</option>
+                                    <option value="others">Others</option>
                                 </select>
                             </label>
-
-                            {/* <input required type="text" placeholder="toy category" className="input input-bordered w-full" /> */}
 
                         </div>
                         {/* price and rating row */}
@@ -108,7 +107,7 @@ const AddAToy = () => {
                                 <span className="label-text font-bold">Price</span>
                             </label>
                             <label className="">
-                                <input required type="text" name='price' placeholder="price" className="input input-bordered w-full" />
+                                <input required type="number" name='price' placeholder="price" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control my-3 mx-3">
@@ -148,13 +147,11 @@ const AddAToy = () => {
                     </div>
                     {/* submit */}
                     <div className="form-control my-3 m-3">
-                        <input className="btn btn-info  text-white normal-case text-xl font-bold" type="submit" value="Add Toy" />
+                        <input className="btn bg-orange-400 border-none  text-white normal-case text-xl font-bold" type="submit" value="Add Toy" />
                     </div>
 
                 </form>
             </div>
-
-
         </div>
     );
 };
