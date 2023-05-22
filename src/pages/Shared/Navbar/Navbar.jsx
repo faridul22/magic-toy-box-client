@@ -54,14 +54,14 @@ const Navbar = () => {
 
                     {
                         user ? <>
-                            <button className='mr-3 bg-[#FF900E] text-white px-4 py-2 rounded-lg font-bold' onClick={handleLogOut}>LogOut</button>
+                            <button className='mr-3 bg-[#FF900E] text-white px-5 py-3 rounded-lg font-bold' onClick={handleLogOut}>LogOut</button>
                             <div className="avatar">
                                 <div className="w-10 rounded-full ring ring-zinc-600 ring-offset-base-100 ring-offset-2">
                                     <img className='' title={user?.displayName} src={user?.photoURL} alt="" />
                                 </div>
                             </div>
                         </> :
-                            <p className='font-bold text-xl'><Link to='/login'>Login</Link></p>
+                            <p className='bg-orange-400 px-6 py-3 rounded-lg font-bold text-xl text-white'><Link to='/login'>Login</Link></p>
                     }
 
                 </div>

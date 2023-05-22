@@ -11,7 +11,6 @@ const ShopByCategory = () => {
         fetch(`http://localhost:5000/categoryToy/${active}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setToys(data)
             })
     }, [active])
@@ -19,8 +18,8 @@ const ShopByCategory = () => {
     const handleActive = (tabName) => {
         setActive(tabName)
     }
-    console.log(active)
-    console.log(toys)
+    // console.log(active)
+    // console.log(toys)
     return (
         <div className='container mx-auto'>
             <div className='mt-14 mb-10'>
