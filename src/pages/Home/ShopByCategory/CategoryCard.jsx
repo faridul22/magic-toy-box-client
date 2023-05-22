@@ -8,8 +8,8 @@ import Swal from 'sweetalert2';
 
 const CategoryCard = ({ toy }) => {
     const { user } = useContext(AuthContext)
-    const { picture, name, price, raging, _id } = toy || {};
-
+    const { picture, name, price, rating, _id } = toy || {};
+    console.log(toy)
 
     const handleViewDetails = () => {
 
@@ -33,13 +33,13 @@ const CategoryCard = ({ toy }) => {
                     <h2 className="card-title ml-7">{name}</h2>
                     <div className='flex justify-around items-center'>
                         <div className='font-bold'>Price: ${price}</div>
-                        <div className='font-bold text-warning flex justify-center items-center'>
-                            <FaStar></FaStar>
-                            <FaStar></FaStar>
-                            <FaStar></FaStar>
-                            <FaStar></FaStar>
-                            <FaStarHalfAlt></FaStarHalfAlt>
-                            <p className='ml-1'>{raging}</p>
+                        <div className='font-bold flex justify-center items-center'>
+                            <FaStar className='text-warning'></FaStar>
+                            <FaStar className='text-warning'></FaStar>
+                            <FaStar className='text-warning'></FaStar>
+                            <FaStar className='text-warning'></FaStar>
+                            <FaStarHalfAlt className='text-warning'></FaStarHalfAlt>
+                            <p className='ml-1 text-gray-500'>{rating}</p>
                         </div>
                     </div>
                     <div className="card-actions flex justify-center bottom-2 my-auto">

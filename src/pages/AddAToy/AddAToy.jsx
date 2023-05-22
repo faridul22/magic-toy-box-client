@@ -14,7 +14,7 @@ const AddAToy = () => {
         const picture = form.picture.value;
         const category = form.category.value;
         const price = form.price.value;
-        const raging = form.raging.value;
+        const rating = form.rating.value;
         const name = form.name.value;
         const email = form.email.value;
         const description = form.description.value;
@@ -24,12 +24,12 @@ const AddAToy = () => {
             picture,
             category,
             price,
-            raging,
+            rating,
             name,
             email,
             description,
         }
-        console.log(newToy)
+        // console.log(newToy)
 
         // send data
         fetch('http://localhost:5000/toy', {
@@ -41,10 +41,10 @@ const AddAToy = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.insertedId) {
                     Swal.fire({
-                        title: 'Added!',
+                        title: 'Product Added!',
                         text: 'New Toy Added Successfully',
                         icon: 'success',
                         confirmButtonText: 'Ok'
@@ -115,7 +115,7 @@ const AddAToy = () => {
                                 <span className="label-text font-bold">Rating</span>
                             </label>
                             <label className="">
-                                <input required type="text" name='raging' placeholder="rating" className="input input-bordered w-full" />
+                                <input required type="text" name='rating' placeholder="rating" className="input input-bordered w-full" />
                             </label>
                         </div>
                         {/* seller info row */}
@@ -147,7 +147,7 @@ const AddAToy = () => {
                     </div>
                     {/* submit */}
                     <div className="form-control my-3 m-3">
-                        <input className="btn bg-orange-400 border-none  text-white normal-case text-xl font-bold" type="submit" value="Add Now" />
+                        <input className="btn bg-orange-400 border-none hover:bg-orange-500  text-white normal-case text-xl font-bold" type="submit" value="Add Now" />
                     </div>
 
                 </form>

@@ -32,7 +32,7 @@ const TableRow = ({ toy }) => {
             <td>{quantity} pcs</td>
             <th>
                 <Link to={`/details/${_id}`}>
-                    <button onClick={handleViewDetails} className=" bg-[#be8748] text-white px-4 py-2 rounded-lg font-semibold">View Details</button>
+                    <button onClick={handleViewDetails} className=" bg-[#be8748] hover:bg-[#f49930] text-white px-4 py-2 rounded-lg font-semibold">View Details</button>
                 </Link>
             </th>
         </tr>

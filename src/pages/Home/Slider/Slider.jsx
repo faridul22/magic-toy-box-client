@@ -6,7 +6,7 @@ const Slider = () => {
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     <div className='relative'>
-                        <img src="https://i.ibb.co/XzFxGb5/banner1.jpg" className="w-full" />
+                        <img src="https://i.ibb.co/Cb2VXZZ/banner1-1.png" className="w-full" />
                         <div className='absolute inset-0 flex justify-center items-center text-center text-white'>
                             <div className='bg-gradient-to-r from-[rgba(25, 25, 25, 0)] to-[rgba(21, 21, 21, 0)]'>
                                 <h2 className='lg:text-7xl lg:my-5 sm:text-3xl font-bold '>Sale 15%</h2>
@@ -24,7 +24,7 @@ const Slider = () => {
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
                     <div className='relative'>
-                        <img src="https://i.ibb.co/k6VRjTw/banner3.jpg" className="w-full" />
+                        <img src="https://i.ibb.co/n3tFc2f/banner2-1.png" className="w-full" />
                         <div className='absolute inset-0 flex justify-center items-center text-center text-white'>
                             <div>
                                 <h2 className='lg:text-7xl lg:my-5 sm:text-3xl font-bold '>Sale 15%</h2>
@@ -42,7 +42,7 @@ const Slider = () => {
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
                     <div className='relative'>
-                        <img src="https://i.ibb.co/4j3KmF9/banner4.jpg" className="w-full" />
+                        <img src="https://i.ibb.co/3z8KjnV/banner3-1.png" className="w-full" />
                         <div className='absolute inset-0 flex justify-center items-center text-center text-white'>
                             <div>
                                 <h2 className='lg:text-7xl lg:my-5 sm:text-3xl font-bold '>Sale 15%</h2>
@@ -60,7 +60,7 @@ const Slider = () => {
                 </div>
                 <div id="slide4" className="carousel-item relative w-full">
                     <div className='relative'>
-                        <img src="https://i.ibb.co/4j3KmF9/banner4.jpg" className="w-full" />
+                        <img src="https://i.ibb.co/Jn7xZfF/banner4-1.png" className="w-full" />
                         <div className='absolute inset-0 flex justify-center items-center text-center text-white'>
                             <div>
                                 <h2 className='lg:text-7xl lg:my-5 sm:text-3xl font-bold '>Sale 15%</h2>

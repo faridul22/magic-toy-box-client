@@ -3,7 +3,7 @@ import { FaStar, FaStarHalfAlt, FaTrashAlt, FaUpload } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const MyToysRow = ({ toy, handleDelete }) => {
-    const { _id, picture, toyName, email, name, price, description, quantity, raging, category } = toy;
+    const { _id, picture, toyName, email, name, price, description, quantity, rating, category } = toy;
 
 
     return (
@@ -31,7 +31,7 @@ const MyToysRow = ({ toy, handleDelete }) => {
                     <FaStar className='text-warning '></FaStar>
                     <FaStar className='text-warning '></FaStar>
                     <FaStarHalfAlt className='text-warning '></FaStarHalfAlt>
-                    <p className='ml-1'>{raging}</p>
+                    <p className='ml-1'>{rating}</p>
                 </span>
             </td>
             {/*category & quantity row */}
@@ -50,12 +50,12 @@ const MyToysRow = ({ toy, handleDelete }) => {
             {/* Update action row */}
             <th>
                 <Link to={`/updateToyInfo/${_id}`}>
-                    <button className="btn btn-square btn-outline text-xs text-orange-400 px-3"><FaUpload className='font-bold text-xl' /></button>
+                    <button className="btn btn-square btn-outline text-xs text-orange-400  hover:bg-orange-500 hover:text-yellow-50 px-3"><FaUpload className='font-bold text-xl' /></button>
                 </Link>
             </th>
             {/* delete action row */}
             <th>
-                <button onClick={() => handleDelete(_id)} className="btn btn-circle btn-outline text-red-500 font-bold"><FaTrashAlt className='font-bold text-xl' /></button>
+                <button onClick={() => handleDelete(_id)} className="btn btn-circle border-red-500  text-red-500 bg-white hover:bg-red-500 hover:text-yellow-50 font-bold"><FaTrashAlt className='font-bold text-xl' /></button>
             </th>
         </tr>
     );

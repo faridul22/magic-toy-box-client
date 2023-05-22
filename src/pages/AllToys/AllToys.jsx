@@ -7,7 +7,7 @@ const AllToys = () => {
     const [searchToy, setSearchToy] = useState(toys);
     const [searchText, setSearchText] = useState("");
 
-    console.log(searchToy)
+    // console.log(searchToy)
     //---------------------------
     const handleSearch = () => {
         fetch(`http://localhost:5000/getToyNameByText/${searchText}`)
@@ -26,7 +26,7 @@ const AllToys = () => {
                     <div className="form-control w-[700px] ml-10">
                         <input onChange={(e) => setSearchText(e.target.value)} type="text" placeholder="Search" className="input input-bordered" />{""}
                     </div>
-                    <button className="btn bg-orange-400 border-0 ml-10 text-white" disabled={searchText == ""} onClick={handleSearch}>Search</button>
+                    <button className="btn bg-orange-400 hover:bg-orange-600 hover:text-white border-0 ml-10 text-white" disabled={searchText == ""} onClick={handleSearch}>Search</button>
                 </div>
             </div>
             {/* Table */}

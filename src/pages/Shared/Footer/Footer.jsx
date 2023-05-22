@@ -25,11 +25,16 @@ const Footer = () => {
                     <a className="flex items-center link link-hover">< FaAddressBook className='mr-2' /> <span>Our office address<address></address></span></a>
                 </div>
                 <div>
-
+                    <span className="footer-title">address</span>
+                    <a className="link link-hover">Road-1/2,3rd floor</a>
+                    <a className="link link-hover">Shah ali Market</a>
+                    <a className="link link-hover">Dhaka,Bangladesh</a>
+                </div>
+                <div>
                     <span className="footer-title">Legal</span>
                     <a className="link link-hover">Terms of use</a>
                     <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <a className="link link-hover">Marketing policy</a>
                 </div>
 
             </footer>
