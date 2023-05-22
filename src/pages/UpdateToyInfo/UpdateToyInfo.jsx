@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 const UpdateToyInfo = () => {
     const toy = useLoaderData();
     console.log(toy)
-    const { _id, quantity, price, description, } = toy;
+    const { _id, quantity, price, description, toyName } = toy;
 
 
     const handleUpdateToy = event => {
@@ -15,7 +15,7 @@ const UpdateToyInfo = () => {
         const quantity = form.quantity.value;
         const description = form.description.value;
         const updatedToy = { quantity, price, description, }
-        console.log(updatedToy)
+        // console.log(updatedToy)
 
         // send data
         fetch(`http://localhost:5000/toys/${_id}`, {
@@ -27,24 +27,23 @@ const UpdateToyInfo = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.modifiedCount > 0) {
                     Swal.fire({
-                        title: 'Success!',
-                        text: 'Toy Updated Successfully',
+                        title: 'Updated!',
+                        text: 'This Toy Information Updated Successfully',
                         icon: 'success',
-                        confirmButtonText: 'Cool'
+                        confirmButtonText: 'Ok'
                     })
                 }
             })
 
     }
-    //  (Price, available quantity, Detail description)
 
     return (
         <div className='container mx-auto w-3/4 my-16'>
-            <div className='border-4 p-10 rounded-lg bg-slate-200'>
-                <h1 className='text-center text-3xl font-bold'>Update Toy</h1>
+            <div className='border-4 border-orange-200 p-10 rounded-lg  bg-orange-50'>
+                <h1 className='text-center text-2xl  font-bold'>Update: <span className='text-orange-600'>{toyName ? toyName : 'Name not found'} </span></h1>
                 <form onSubmit={handleUpdateToy}>
                     <div className='grid lg:grid-cols-1'>
                         {/* price and quantity row */}
@@ -77,7 +76,7 @@ const UpdateToyInfo = () => {
                     </div>
                     {/* submit */}
                     <div className="form-control my-3 m-3">
-                        <input className="btn btn-info  text-white normal-case text-xl font-bold" type="submit" value="Update Toy" />
+                        <input className="btn bg-orange-400 border-none hover:bg-orange-500  text-white normal-case text-xl font-bold" type="submit" value="Update Now" />
                     </div>
 
                 </form>
