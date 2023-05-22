@@ -9,7 +9,7 @@ const AddAToy = () => {
     const handleAddAToy = event => {
         event.preventDefault()
         const form = event.target;
-        const toyName = form.name.value;
+        const toyName = form.toyName.value;
         const quantity = form.quantity.value;
         const picture = form.picture.value;
         const category = form.category.value;
@@ -44,7 +44,7 @@ const AddAToy = () => {
                 console.log(data)
                 if (data.insertedId) {
                     Swal.fire({
-                        title: 'Success!',
+                        title: 'Added!',
                         text: 'New Toy Added Successfully',
                         icon: 'success',
                         confirmButtonText: 'Ok'
@@ -60,13 +60,13 @@ const AddAToy = () => {
                 <h1 className='text-center text-3xl text-orange-500 mb-5 font-bold'>Add a new toy</h1>
                 <form onSubmit={handleAddAToy}>
                     <div className='grid lg:grid-cols-2'>
-                        {/* name quantity row */}
+                        {/*toy name quantity row */}
                         <div className="form-control my-3 mx-3">
                             <label className="label">
                                 <span className="label-text font-bold">Toy Name</span>
                             </label>
                             <label className="">
-                                <input required type="text" name='name' placeholder="toy name" className="input input-bordered w-full" />
+                                <input required type="text" name='toyName' placeholder="toy name" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control my-3 mx-3">
@@ -147,7 +147,7 @@ const AddAToy = () => {
                     </div>
                     {/* submit */}
                     <div className="form-control my-3 m-3">
-                        <input className="btn bg-orange-400 border-none  text-white normal-case text-xl font-bold" type="submit" value="Add Toy" />
+                        <input className="btn bg-orange-400 border-none  text-white normal-case text-xl font-bold" type="submit" value="Add Now" />
                     </div>
 
                 </form>

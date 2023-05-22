@@ -48,19 +48,18 @@ const MyToys = () => {
         })
     }
     return (
-        <div>
-            <h1>My toys: {toys.length}</h1>
-
+        <div className='mb-28 mt-7 container mx-auto'>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                            <th>Update</th>
-                            <th>Delete</th>
+                            <th className='normal-case font-bold text-[20px]'>Product name</th>
+                            <th className='normal-case font-bold text-[20px]'> Price & Rating</th>
+                            <th className='normal-case font-bold text-[20px]'>Category & Available quantity</th>
+                            <th className='normal-case font-bold text-[20px]'>Seller Info</th>
+                            <th className='text-orange-400 '>Update</th>
+                            <th className='text-red-600'>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -72,19 +71,10 @@ const MyToys = () => {
                         ></MyToysRow>)}
 
                     </tbody>
-                    {/* foot */}
-                    <tfoot>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                            <th></th>
-                        </tr>
-                    </tfoot>
 
                 </table>
             </div>
+            <div className='divider'>End</div>
         </div>
     );
 };

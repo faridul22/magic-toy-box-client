@@ -39,12 +39,12 @@ const UpdateToyInfo = () => {
             })
 
     }
-
+    //  (Price, available quantity, Detail description)
 
     return (
         <div className='container mx-auto w-3/4 my-16'>
             <div className='border-4 p-10 rounded-lg bg-slate-200'>
-                <h1 className='text-center text-3xl font-bold'>Add A Toy</h1>
+                <h1 className='text-center text-3xl font-bold'>Update Toy</h1>
                 <form onSubmit={handleUpdateToy}>
                     <div className='grid lg:grid-cols-1'>
                         {/* price and quantity row */}
