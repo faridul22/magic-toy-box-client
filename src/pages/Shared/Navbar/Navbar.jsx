@@ -54,7 +54,7 @@ const Navbar = () => {
 
                     {
                         user ? <>
-                            <button className='mr-3 bg-[#FF900E] text-white px-5 py-3 rounded-lg font-bold' onClick={handleLogOut}>LogOut</button>
+                            <button className='mr-3 bg-[#FF900E] text-white px-5 py-3 rounded-lg font-bold' onClick={handleLogOut}>Log Out</button>
                             <div className="avatar">
                                 <div className="w-10 rounded-full ring ring-zinc-600 ring-offset-base-100 ring-offset-2">
                                     <img className='' title={user?.displayName} src={user?.photoURL} alt="" />

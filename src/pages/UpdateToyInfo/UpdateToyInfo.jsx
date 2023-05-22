@@ -81,8 +81,6 @@ const UpdateToyInfo = () => {
 
                 </form>
             </div>
-
-
         </div>
     );
 };
