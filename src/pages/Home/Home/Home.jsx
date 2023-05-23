@@ -3,6 +3,7 @@ import Gallery from "../Gallery/Gallery";
 import PeopleUse from "../PeopleUse/PeopleUse";
 import ShopByCategory from "../ShopByCategory/ShopByCategory";
 import Slider from "../Slider/Slider";
+import SubscribeSection from "../SubscribeSection/SubscribeSection";
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <Gallery></Gallery>
             <ShopByCategory></ShopByCategory>
             <PeopleUse></PeopleUse>
+            <SubscribeSection></SubscribeSection>
         </div>
     );
 };
