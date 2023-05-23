@@ -2,9 +2,9 @@ import React from 'react';
 
 const PeopleUse = () => {
     return (
-        <div className='bg-base-200 py-20 my-28 sm:w-full mx-auto rounded-xl'>
+        <div className='bg-base-200 py-20 my-28 sm:w-full mx-auto container rounded-xl'>
             <h2 className='lg:text-4xl font-semibold text-center mb-10'>Millions of people use: Magic ToyBox</h2>
-            <div className='ml-5 mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:gap-0 gap-4'>
+            <div className='lg:ml-20 md:ml-5 mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:gap-0 gap-4'>
                 <div className="card mx-auto w-4/5 lg:w-60 lg:h-60 sm:mx-3 mr-10 bg-green-200 shadow-lg">
                     <figure className="pt-10">
                         <img width={80} src="https://i.ibb.co/YTn8HkS/free.png" alt="free shipping" className="rounded-lg" />
