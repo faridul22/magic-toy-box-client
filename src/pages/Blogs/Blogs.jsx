@@ -5,6 +5,7 @@ const Blogs = () => {
     useTitle("Blogs")
     return (
         <div className='container my-20'>
+            <h2 className='text-center font-semibold text-3xl text-green-600 underline shadow-md w-1/2 mx-auto pb-5 rounded-lg'>Welcome to the blog </h2>
             {/* blog 1 */}
             <div className="card w-3/4 mx-auto bg-base-100 shadow-xl pb-10 my-10">
                 <div className="card-body">
