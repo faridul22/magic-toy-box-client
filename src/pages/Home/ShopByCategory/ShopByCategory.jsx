@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import CategoryCard from './CategoryCard';
+import { FaSearch } from 'react-icons/fa';
 
 const ShopByCategory = () => {
     const [toys, setToys] = useState([])
@@ -28,7 +29,7 @@ const ShopByCategory = () => {
                 <hr className='w-1/4 mx-auto' />
             </div>
             <div className='text-center'>
-                <div className="btn-group btn-group-vertical lg:btn-group-horizontal">
+                <div className="btn-group btn-group-vertical lg:btn-group-horizontal bg-base-100 shadow-xl rounded-lg w-100">
                     <div className='lg:mx-3 md:my-3 sm:mb-3'>
                         <button onClick={() => handleActive("sportsCar")} className={active === "sportsCar" ? "bg-[#FF900E] text-white hover:bg-orange-500 btn normal-case" : "btn hover:bg-orange-500 text-black hover:text-white normal-case bg-orange-100"}>Sports Car</button>
                     </div>
@@ -38,6 +39,10 @@ const ShopByCategory = () => {
                     <div className='lg:mx-3 md:my-3 sm:mb-3'>
                         <button onClick={() => handleActive("bus")} className={active === "bus" ? "bg-[#FF900E] text-white hover:bg-orange-500 btn normal-case" : "btn hover:bg-orange-500 text-black hover:text-white normal-case bg-orange-100"}>Bus Car</button>
                     </div>
+                    <div className='md:my-3 sm:mb-3 px-5'>
+                        <FaSearch className='text-4xl mt-2'></FaSearch>
+                    </div>
+
                 </div>
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10'>
                     {toys.map(toy => <CategoryCard
