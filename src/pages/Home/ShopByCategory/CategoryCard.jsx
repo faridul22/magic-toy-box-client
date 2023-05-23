@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
-import { Link, unstable_HistoryRouter, useLocation, useNavigate } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const CategoryCard = ({ toy }) => {
     const { user } = useContext(AuthContext)
@@ -23,8 +24,12 @@ const CategoryCard = ({ toy }) => {
         }
     };
 
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     return (
-        <div className='border-2 rounded-xl'>
+        <div data-aos="fade-down" className='border-2 rounded-xl'>
             <div className="card h-[560px] w-full bg-base-100 shadow-md">
                 <figure className="px-10 pt-10">
                     <img src={picture} alt="Toy" className="rounded-xl w-3/4" />
