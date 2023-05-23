@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import TableRow from './TableRow';
+import useTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
     const toys = useLoaderData();
@@ -8,7 +9,7 @@ const AllToys = () => {
     const [searchText, setSearchText] = useState("");
 
     // console.log(searchToy)
-    //---------------------------
+
     const handleSearch = () => {
         fetch(`http://localhost:5000/getToyNameByText/${searchText}`)
             .then((res) => res.json())
@@ -17,8 +18,8 @@ const AllToys = () => {
                 setSearchToy(data);
             });
     };
-    //----------------------------
 
+    useTitle("All toys")
     return (
         <div >
             <div className="navbar container mx-auto bg-orange-50 rounded-md mb-3 mt-7">

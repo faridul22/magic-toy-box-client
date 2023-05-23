@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 
 const Login = () => {
@@ -46,6 +47,7 @@ const Login = () => {
                 setErrorMessage("Google login action failed try again")
             })
     }
+    useTitle("Login")
     return (
         <div>
             <div className="hero min-h-screen my-12">

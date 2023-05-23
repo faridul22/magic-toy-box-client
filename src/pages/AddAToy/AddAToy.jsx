@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../providers/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const AddAToy = () => {
     const { user } = useContext(AuthContext);
@@ -53,7 +54,7 @@ const AddAToy = () => {
             })
 
     }
-
+    useTitle("Add a toy")
     return (
         <div className='container mx-auto w-3/4 my-16'>
             <div className='border-4 border-orange-200 p-10 rounded-lg  bg-orange-50'>

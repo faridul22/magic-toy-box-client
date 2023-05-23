@@ -1,9 +1,11 @@
+import useTitle from "../../../hooks/useTitle";
 import Gallery from "../Gallery/Gallery";
 import ShopByCategory from "../ShopByCategory/ShopByCategory";
 import Slider from "../Slider/Slider";
 
 
 const Home = () => {
+    useTitle("Home")
     return (
         <div>
             <Slider></Slider>

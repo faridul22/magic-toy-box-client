@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaBeer, FaGoogle } from 'react-icons/fa';
+import useTitle from "../../hooks/useTitle";
 
 const Register = () => {
     const { createUser, errorMessage, setErrorMessage, updateUserProfile, loginWithGoogle } = useContext(AuthContext)
@@ -52,6 +53,7 @@ const Register = () => {
                 setErrorMessage("Google login action failed try again")
             })
     }
+    useTitle("Register")
     return (
         <div>
             <div className="hero min-h-screen my-12">

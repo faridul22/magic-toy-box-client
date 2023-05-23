@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import MyToysRow from './MyToysRow';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext)
@@ -47,6 +48,7 @@ const MyToys = () => {
             }
         })
     }
+    useTitle("My toys")
     return (
         <div className='mb-28 mt-7 container mx-auto'>
             <div className="overflow-x-auto w-full">

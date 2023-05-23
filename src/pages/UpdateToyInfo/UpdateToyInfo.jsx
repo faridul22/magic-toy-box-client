@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const UpdateToyInfo = () => {
     const toy = useLoaderData();
@@ -40,6 +41,7 @@ const UpdateToyInfo = () => {
 
     }
 
+    useTitle("Update toy")
     return (
         <div className='container mx-auto w-3/4 my-16'>
             <div className='border-4 border-orange-200 p-10 rounded-lg  bg-orange-50'>

@@ -1,12 +1,15 @@
 import React from 'react';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const ViewDetails = () => {
     const toy = useLoaderData();
     console.log(toy)
 
     const { picture, toyName, name, email, price, rating, quantity, description } = toy;
+
+    useTitle("View details")
     return (
         <div>
             <div className="card container w-3/4 mx-auto mb-32 mt-10 bg-base-100 shadow-xl pb-5">
