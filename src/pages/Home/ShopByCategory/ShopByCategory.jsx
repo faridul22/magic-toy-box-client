@@ -22,19 +22,21 @@ const ShopByCategory = () => {
     // console.log(toys)
     return (
         <div className='container mx-auto'>
-            <div className='mt-14 mb-10'>
+            <div className='mt-14 mb-5'>
                 <div className="divider text-3xl font-semibold">Shop By Category</div>
+                <p className='text-center text-gray-500 mt-3'>Click on the buttons below to filter products by category and shop.</p>
+                <hr className='w-1/4 mx-auto' />
             </div>
             <div className='text-center'>
-                <div className="lg:flex container rounded-lg items-center justify-center bg-slate-50 mx-auto font-medium normal-case text-xl">
-                    <div className='mx-5'>
-                        <button onClick={() => handleActive("sportsCar")} className={active === "sportsCar" ? "rounded-xl bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5 rounded-xl bg-orange-100"}>Sports Car</button>
+                <div className="btn-group btn-group-vertical lg:btn-group-horizontal">
+                    <div className='lg:mx-3 md:my-3 sm:mb-3'>
+                        <button onClick={() => handleActive("sportsCar")} className={active === "sportsCar" ? "bg-[#FF900E] text-white hover:bg-orange-500 btn normal-case" : "btn hover:bg-orange-500 text-black hover:text-white normal-case bg-orange-100"}>Sports Car</button>
                     </div>
-                    <div className='mx-5'>
-                        <button onClick={() => handleActive("truck")} className={active === "truck" ? "rounded-xl bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5 rounded-xl bg-orange-100"}>Truck</button>
+                    <div className='lg:mx-3 md:my-3 sm:mb-3'>
+                        <button onClick={() => handleActive("truck")} className={active === "truck" ? "bg-[#FF900E] text-white hover:bg-orange-500 btn normal-case" : "btn hover:bg-orange-500 text-black hover:text-white normal-case bg-orange-100"}>Truck</button>
                     </div>
-                    <div className='mx-5'>
-                        <button onClick={() => handleActive("bus")} className={active === "bus" ? "rounded-xl bg-[#FF900E] text-white py-3 px-5" : "py-3 px-5 rounded-xl bg-orange-100"}>Bus Car</button>
+                    <div className='lg:mx-3 md:my-3 sm:mb-3'>
+                        <button onClick={() => handleActive("bus")} className={active === "bus" ? "bg-[#FF900E] text-white hover:bg-orange-500 btn normal-case" : "btn hover:bg-orange-500 text-black hover:text-white normal-case bg-orange-100"}>Bus Car</button>
                     </div>
                 </div>
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10'>
