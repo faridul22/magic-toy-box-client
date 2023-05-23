@@ -9,7 +9,8 @@ b7a11-toy-marketplace-client-side-faridul22 created by GitHub Classroom
 - And the logged in user can delete any product if he wants.
 - Also used some other note packages.
 - To build this website I mainly used ReactJS, and TailWind CSS, DaisyUI.
-
+- ## Live website link
+## [https://magic-toy-box.web.app/](https://magic-toy-box.web.app/)
 
 
 
