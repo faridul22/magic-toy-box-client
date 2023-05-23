@@ -33,7 +33,7 @@ const AddAToy = () => {
         // console.log(newToy)
 
         // send data
-        fetch('http://localhost:5000/toy', {
+        fetch('https://magic-toy-box-server.vercel.app/toy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

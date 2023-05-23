@@ -19,7 +19,7 @@ const UpdateToyInfo = () => {
         // console.log(updatedToy)
 
         // send data
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://magic-toy-box-server.vercel.app/toys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

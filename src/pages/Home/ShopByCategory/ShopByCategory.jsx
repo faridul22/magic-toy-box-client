@@ -9,7 +9,7 @@ const ShopByCategory = () => {
     const [active, setActive] = useState("sportsCar");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/categoryToy/${active}`)
+        fetch(`https://magic-toy-box-server.vercel.app/categoryToy/${active}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data)

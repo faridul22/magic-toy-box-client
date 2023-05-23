@@ -11,7 +11,7 @@ const AllToys = () => {
     // console.log(searchToy)
 
     const handleSearch = () => {
-        fetch(`http://localhost:5000/getToyNameByText/${searchText}`)
+        fetch(`https://magic-toy-box-server.vercel.app/getToyNameByText/${searchText}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
